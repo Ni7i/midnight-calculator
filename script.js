@@ -1,11 +1,3 @@
-// API für Gebetszeiten (Salah)
-function loadPrayerTimes() {
-    const apiKey = 'your_api_key_here'; // API-Schlüssel von Aladhan
-    const latitude = 52.5200; // Beispiel: Berlin, Latitude
-    const longitude = 13.4050; // Beispiel: Berlin, Longitude
-
-    // URL für Gebetszeiten-API
-    const url = `http://api.aladhan.com/v1/timings?latitude=${latitude}&longitude=${longitude}&method=2`;
 
     fetch(url)
         .then(response => response.json())
@@ -97,3 +89,4 @@ function berechneNacht() {
       timeline.appendChild(li);
     });
 }
+
