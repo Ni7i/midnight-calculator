@@ -1,28 +1,3 @@
-
-    fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            const times = data.data.timings;
-            const prayerTimesList = document.getElementById('prayerTimes');
-
-            // Lösche bestehende Gebetszeiten
-            prayerTimesList.innerHTML = '';
-
-            // Füge Gebetszeiten zur Liste hinzu
-            for (let prayer in times) {
-                let li = document.createElement('li');
-                li.textContent = `${prayer}: ${times[prayer]}`;
-                prayerTimesList.appendChild(li);
-            }
-        })
-        .catch(error => {
-            console.error("Fehler beim Abrufen der Gebetszeiten:", error);
-        });
-}
-
-// Gebetszeiten beim Laden der Seite anzeigen
-window.onload = loadPrayerTimes;
-
 // Berechnung der Nachtzeit
 function berechneNacht() {
     const maghrib = document.getElementById('maghrib').value;
